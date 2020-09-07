@@ -1,0 +1,130 @@
+﻿Logic to find the smaller number
+-----------------------------------------
+int? result = null;
+foreach (var item in listOfIntegers)
+{
+if(!result.HasValue || item < result)
+{
+  result = item;
+}
+}
+ 
+Console.WriteLine(result); 	
+
+Logic to Find the smallest Even number
+-----------------------------------------
+int? result = null;
+
+foreach (var item in listOfIntegers)
+{
+if (item % 2 == 0)
+{
+   if (!result.HasValue || item < result)
+   {
+     result = item;
+   }
+}
+       
+Console.WriteLine(result); 	
+
+Logic to find the largest even number
+-----------------------------------------
+int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+int? result = null;
+
+foreach (var item in listOfIntegers)
+{
+   if (!result.HasValue || item > result)
+   {
+     result = item;
+   }
+}
+Console.WriteLine(result);
+
+
+Logic to find the total number
+-----------------------------------------
+
+ int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int result = 0;
+
+
+            foreach (var item in numbers)
+            {
+                result += item;
+            }
+            Console.WriteLine("Total number count is " + result);
+
+
+Logic to find the sum of all even numbers
+-----------------------------------------
+
+  foreach (var item in numbers)
+            {
+                if (item % 2 == 0)
+                {
+                    result += item;
+                }
+            }
+            Console.WriteLine("Sum of all even numbers is " + result);
+
+
+
+Logic to find the Count of numbers
+-----------------------------------------
+ int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            int result = 0;
+
+ int totalNumberCount = numbers.Where(x => x % 2 == 0).Sum();
+            Console.WriteLine("The total number count is " + totalNumberCount);
+            foreach (var item in numbers)
+            {
+                result += 1;
+             }
+Console.WriteLine("The count of numbers " + result);
+
+
+
+
+
+
+
+Logic to find the Count of all even numbers
+-----------------------------------------
+ foreach (var item in numbers)
+            {
+
+                if (item % 2 == 0)
+                {
+                    result += 1;
+                }
+            }
+            Console.WriteLine("The count of all even numbers " + result);
+
+
+
+
+
+
+
+
+
+
+
+Logic to find the Average of all even numbers
+-----------------------------------------
+ int[] numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            double? result = 0;
+            double? sum = 0;
+            int total = 0;
+
+foreach (int i in numbers)
+{
+    if (i % 2 == 0)
+    {
+      sum = sum + i;
+      total = total + 1;
+    }
+}
+result = sum / total;
+Console.WriteLine("The average is " + result);
