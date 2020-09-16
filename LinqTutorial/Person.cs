@@ -8,18 +8,18 @@ namespace LinqTutorial
     {
         public int Id { get; set; }
         public string Name { get; set; }
-        public string Email { get; set; }
 
-        public Person(int id, string name, string email)
+        public Gender Gender { get; set; }
+        public decimal Salary { get; set; }
+        public int DepartmentId { get; set; }
+
+        public Person(int id, string name, Gender gender, int departmentId, decimal salary) 
         {
             Id = id;
             Name = name;
-            Email = email;
-        }
-
-        public void PrintDetails()
-        {
-            Console.WriteLine($"Id = {Id.ToString()}\nName = {Name}\nEmail = {Email}");
+            Gender = gender;
+            DepartmentId = departmentId;
+            Salary = salary;
         }
     }
 }
