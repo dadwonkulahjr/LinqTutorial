@@ -21,5 +21,18 @@ namespace LinqTutorial
             DepartmentId = departmentId;
             Salary = salary;
         }
+        public Person()
+        {
+
+        }
+        public override bool Equals(object obj)
+        {
+            return Id.Equals(((Person)obj).Id) && Name.Equals(((Person)obj).Name) && Gender.Equals(((Person)obj).Gender) && DepartmentId.Equals(((Person)obj).DepartmentId) && Salary.Equals(((Person)obj).Salary);
+
+        }
+        public override int GetHashCode()
+        {
+            return Id.GetHashCode() ^ DepartmentId.GetHashCode() ^ Salary.GetHashCode();
+        }
     }
 }
