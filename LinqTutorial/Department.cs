@@ -6,26 +6,26 @@ namespace LinqTutorial
 {
     public class Department
     {
-        public int Id { get; set; }
+        public int DepartmentId { get; set; }
         public string DepartmentName { get; set; }
        
-        public static IList<Department> GetDepartments()
+        public static List<Department> GetDepartments()
         {
             return new List<Department>()
            {
                new Department()
                {
-                   Id = 100,
+                   DepartmentId = 100,
                    DepartmentName = "IT"
                },
                 new Department()
                {
-                   Id = 200,
+                   DepartmentId = 200,
                    DepartmentName = "HR"
                },
                  new Department()
                {
-                   Id = 300,
+                   DepartmentId = 300,
                    DepartmentName = "Payroll"
                },
            };

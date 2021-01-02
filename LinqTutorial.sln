@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30413.136
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinqTutorial", "LinqTutorial\LinqTutorial.csproj", "{343301AF-CA7F-423F-A83D-570713B8B902}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqTutorial", "LinqTutorial\LinqTutorial.csproj", "{343301AF-CA7F-423F-A83D-570713B8B902}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinqTutorial.Data.Access", "LinqTutorial.Data.Access\LinqTutorial.Data.Access.csproj", "{678E4E3F-3F7E-44A5-8BD6-E128402C3634}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Payroll_ Management_System", "Payroll_ Management_System\Payroll_ Management_System.csproj", "{7126D392-D6F4-42EF-AE78-B7F0CD684E23}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{343301AF-CA7F-423F-A83D-570713B8B902}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{343301AF-CA7F-423F-A83D-570713B8B902}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{343301AF-CA7F-423F-A83D-570713B8B902}.Release|Any CPU.Build.0 = Release|Any CPU
+		{678E4E3F-3F7E-44A5-8BD6-E128402C3634}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{678E4E3F-3F7E-44A5-8BD6-E128402C3634}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{678E4E3F-3F7E-44A5-8BD6-E128402C3634}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{678E4E3F-3F7E-44A5-8BD6-E128402C3634}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7126D392-D6F4-42EF-AE78-B7F0CD684E23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7126D392-D6F4-42EF-AE78-B7F0CD684E23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7126D392-D6F4-42EF-AE78-B7F0CD684E23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7126D392-D6F4-42EF-AE78-B7F0CD684E23}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

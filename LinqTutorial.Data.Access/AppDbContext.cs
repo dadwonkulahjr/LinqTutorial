@@ -2,9 +2,9 @@
 using System.Configuration;
 using System.Data.SqlClient;
 
-namespace LinqTutorial
+namespace LinqTutorial.Data.Access
 {
-    public class SQLDbContext
+    public class AppDbContext
     {
         public async static void ConnectToDatabase()
         {
