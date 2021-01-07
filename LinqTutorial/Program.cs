@@ -1,5 +1,5 @@
-﻿using Payroll__Management_System;
-using System;
+﻿using System;
+using Payroll_Management_System_2;
 using System.Collections.Generic;
 
 namespace LinqTutorial
@@ -129,20 +129,81 @@ namespace LinqTutorial
     //        _hourlyPayRate.ToString("c") + ", Hours Work = " + _hoursWork;
     //    }
     //}
-
-
     public class Program
     {
-
         static void Main(string[] args)
         {
-           
-            Console.ReadLine();
+            List<Staff> listOfStaffObjects = new List<Staff>();
+            int month = 0; int year = 0;
+            while (year == 0)
+            {
+                try
+                {
+                    Console.Write("Please enter the year: ");
+                    year = Convert.ToInt32(Console.ReadLine());
+
+                    while (month == 0)
+                    {
+                        try
+                        {
+                            Console.Write("Please enter the month: ");
+                            month = Convert.ToInt32(Console.ReadLine());
+
+                            if (month < 1 || month > 12)
+                            {
+                                Console.WriteLine("Invalid month entered.");
+                                month = 0;
+                            }
+                            else
+                            {
+                                FileReaderManager fileReaderManager = new FileReaderManager();
+                                listOfStaffObjects = fileReaderManager.ReadFile();
+                                for (int i = 0; i < listOfStaffObjects.Count; i++)
+                                {
+                                    try
+                                    {
+                                        Console.WriteLine("Enter the hours work for " + listOfStaffObjects[i].NameOfStaff + ": ");
+                                        listOfStaffObjects[i].HoursWorked = Convert.ToInt32(Console.ReadLine());
+
+                                        listOfStaffObjects[i].CalculatePay();
+                                        Console.WriteLine(listOfStaffObjects[i].ToString());
+
+                                        Payslip ps = new Payslip(year, month);
+                                        ps.GeneratePaySlip(listOfStaffObjects);
+                                        ps.GenerateSummary(listOfStaffObjects);
+                                        Console.Read();
+                                    }
+                                    catch (Exception ex)
+                                    {
+                                        i--;
+                                        Console.WriteLine(ex.Message);
+                                    }
+                                }
+                            }
+                        }
+                        catch (Exception ex)
+                        {
+
+                            Console.WriteLine(ex.Message);
+                        }
+
+                    }
+                }
+                catch (FormatException ex)
+                {
+
+                    Console.WriteLine(ex.Message);
+                }
+            }
+
+
         }
     }
 
-
 }
+
+
+
 
 
 

@@ -11,8 +11,14 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AbstractDemo\AbstractDemo.csproj" />
+    <ProjectReference Include="..\ClassDemo\ClassDemo.csproj" />
+    <ProjectReference Include="..\FileHandlingDemo\FileHandlingDemo.csproj" />
+    <ProjectReference Include="..\InterfaceDemo\InterfaceDemo.csproj" />
     <ProjectReference Include="..\LinqTutorial.Data.Access\LinqTutorial.Data.Access.csproj" />
     <ProjectReference Include="..\Payroll_ Management_System\Payroll_ Management_System.csproj" />
+    <ProjectReference Include="..\Payroll_Management_System_2\Payroll_Management_System_2.csproj" />
+    <ProjectReference Include="..\StructDemo\StructDemo.csproj" />
   </ItemGroup>
 
 </Project>

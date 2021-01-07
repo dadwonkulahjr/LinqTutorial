@@ -86,6 +86,8 @@ namespace Payroll__Management_System
                 }
             }
         }
+    }
+}
 
         //Code to run the Program in the Method....
 //        List<Staff> listOfStaffObjects = new List<Staff>();
